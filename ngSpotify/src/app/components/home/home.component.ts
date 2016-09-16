@@ -12,6 +12,7 @@ export class HomeComponent  {
   constructor(private spotifyService: SpotifyService){}
   searchMusic(){
     this.spotifyService.searchMusic(this.searchStr).subscribe(res => {
+      console.log(res);
       this.searchRes = res.artists.items;
     })
   }
